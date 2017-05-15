@@ -7,7 +7,7 @@ const postSchema = mongoose.Schema({
       "firstName": {type: String, required: true},
       "lastName": {type: String, required: true}
   },
-  "created": {type: Date, required: true}, 
+  "created": {type: Date}, 
 });
 
 //Virtuals
@@ -27,3 +27,5 @@ postSchema.methods.apiRepr = function() {
 }
 
 const Post = mongoose.model('blogPost', postSchema);
+
+module.exports = {Post};
